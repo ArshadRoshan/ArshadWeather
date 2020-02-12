@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/hill"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over"
+    >
+
+    <ImageView
+        android:id="@+id/imageZero"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentQuote"
+        app:layout_constraintVertical_bias="0.488" />
+
+    <ImageView
+        android:id="@+id/ImageOne"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageZero"
+        app:layout_constraintRight_toLeftOf="@+id/imageTwo"
+        app:layout_constraintTop_toBottomOf="@+id/currentQuote" />
+
+    <ImageView
+        android:id="@+id/imageTwo"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/currentQuote"
+        app:layout_constraintRight_toRightOf="@+id/currentQuote"
+        app:layout_constraintTop_toBottomOf="@+id/currentQuote" />
+
+    <ImageView
+        android:id="@+id/imageThree"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageTwo"
+        app:layout_constraintRight_toLeftOf="@+id/ImageFour"
+        app:layout_constraintTop_toBottomOf="@+id/currentQuote" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="68dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="@+id/id_txtLocation"
+        app:layout_constraintTop_toBottomOf="@+id/id_txtLocation" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="228dp"
+        android:onClick="onClickGo"
+        android:text="go"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <ImageView
+        android:id="@+id/currentImage"
+        android:layout_width="119dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
+
+    <TextView
+        android:id="@+id/currentTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Current Temperature"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/currentImage"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="@+id/currentImage"
+        app:layout_constraintRight_toRightOf="@+id/currentImage" />
+
+    <TextView
+        android:id="@+id/currentQuote"
+        android:layout_width="224dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Quote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="@+id/currentImage"
+        app:layout_constraintRight_toRightOf="@+id/currentImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <TextView
+        android:id="@+id/id_txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Zip Code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ImageFour"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentQuote" />
+
+    <TextView
+        android:id="@+id/txtHighZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="High0"
+        app:layout_constraintBottom_toTopOf="@+id/imageZero"
+        app:layout_constraintLeft_toLeftOf="@+id/imageZero"
+        app:layout_constraintRight_toRightOf="@+id/imageZero" />
+
+    <TextView
+        android:id="@+id/txtLowZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Low0"
+        app:layout_constraintLeft_toLeftOf="@+id/imageZero"
+        app:layout_constraintRight_toRightOf="@+id/imageZero"
+        app:layout_constraintTop_toBottomOf="@+id/imageZero" />
+
+    <TextView
+        android:id="@+id/txtHighOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="High1"
+        app:layout_constraintBottom_toTopOf="@+id/ImageOne"
+        app:layout_constraintLeft_toLeftOf="@+id/ImageOne"
+        app:layout_constraintRight_toRightOf="@+id/ImageOne" />
+
+    <TextView
+        android:id="@+id/txtLowOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Low1"
+        app:layout_constraintLeft_toLeftOf="@+id/ImageOne"
+        app:layout_constraintRight_toRightOf="@+id/ImageOne"
+        app:layout_constraintTop_toBottomOf="@+id/ImageOne" />
+
+    <TextView
+        android:id="@+id/txtHighTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="High2"
+        app:layout_constraintBottom_toTopOf="@+id/imageTwo"
+        app:layout_constraintLeft_toLeftOf="@+id/imageTwo"
+        app:layout_constraintRight_toRightOf="@+id/imageTwo" />
+
+    <TextView
+        android:id="@+id/txtLowTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Low2"
+        app:layout_constraintLeft_toLeftOf="@+id/imageTwo"
+        app:layout_constraintRight_toRightOf="@+id/imageTwo"
+        app:layout_constraintTop_toBottomOf="@+id/imageTwo" />
+
+    <TextView
+        android:id="@+id/txtHighThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="High3"
+        app:layout_constraintBottom_toTopOf="@+id/imageThree"
+        app:layout_constraintLeft_toLeftOf="@+id/imageThree"
+        app:layout_constraintRight_toRightOf="@+id/imageThree" />
+
+    <TextView
+        android:id="@+id/txtLowFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Low4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/ImageFour"
+        app:layout_constraintRight_toRightOf="@+id/ImageFour"
+        app:layout_constraintTop_toBottomOf="@+id/ImageFour" />
+
+    <TextView
+        android:id="@+id/txtHighFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="High4"
+        app:layout_constraintBottom_toTopOf="@+id/ImageFour"
+        app:layout_constraintLeft_toLeftOf="@+id/ImageFour"
+        app:layout_constraintRight_toRightOf="@+id/ImageFour" />
+
+    <TextView
+        android:id="@+id/txtLow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Low3"
+        app:layout_constraintLeft_toLeftOf="@+id/imageThree"
+        app:layout_constraintRight_toRightOf="@+id/imageThree"
+        app:layout_constraintTop_toBottomOf="@+id/imageThree" />
+
+    <TextView
+        android:id="@+id/timeZero"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:text="Time0"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintLeft_toLeftOf="@+id/txtLowZero"
+        app:layout_constraintRight_toRightOf="@+id/txtLowZero" />
+
+    <TextView
+        android:id="@+id/timeThree"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:text="Time3"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintLeft_toLeftOf="@+id/txtLowOne"
+        app:layout_constraintRight_toRightOf="@+id/txtLowOne" />
+
+    <TextView
+        android:id="@+id/timeSix"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:text="Time6"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintLeft_toLeftOf="@+id/txtLowTwo"
+        app:layout_constraintRight_toRightOf="@+id/txtLowTwo" />
+
+    <TextView
+        android:id="@+id/timeTwelve"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="-9dp"
+        android:layout_marginRight="0dp"
+        android:text="Time12"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintLeft_toLeftOf="@+id/txtLowFour"
+        app:layout_constraintRight_toRightOf="@+id/txtLowFour" />
+
+    <TextView
+        android:id="@+id/timeNine"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:text="Time9"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintLeft_toLeftOf="@+id/txtLow3"
+        app:layout_constraintRight_toRightOf="@+id/txtLow3" />
+
+</android.support.constraint.ConstraintLayout>
